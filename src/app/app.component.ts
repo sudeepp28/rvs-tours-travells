@@ -10,7 +10,7 @@ import { AfterViewInit, Component } from '@angular/core';
   styleUrl: './app.component.css',
 })
 export class AppComponent implements AfterViewInit {
-  adminPhone: string = '+919964758999';
+  adminPhone: string = '+918884443249';
   prefilledText: string = encodeURIComponent('Hi, I would like to Book A Cab ');
   constructor() { }
 
