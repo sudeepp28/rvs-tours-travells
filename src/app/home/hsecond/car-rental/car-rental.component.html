@@ -1,0 +1,60 @@
+<h3>Car Rental Booking</h3>
+
+<form (ngSubmit)="submitForm()" #rentalForm="ngForm">
+
+  
+<label >Rental Package :</label>
+<!-- Package Selection Radios -->
+<div class="rental-packages">
+  <label class="radio-option">
+    <input type="radio" name="rentalPackage" [(ngModel)]="rentalPackage" value="4hrs 40kms" required />
+    <span class="custom-radio"></span>
+    4hrs 40kms
+  </label>
+  <label class="radio-option">
+    <input type="radio" name="rentalPackage" [(ngModel)]="rentalPackage" value="8hrs 80kms" />
+    <span class="custom-radio"></span>
+    8hrs 80kms
+  </label>
+  <label class="radio-option">
+    <input type="radio" name="rentalPackage" [(ngModel)]="rentalPackage" value="12hrs 120kms" />
+    <span class="custom-radio"></span>
+    12hrs 120kms
+  </label>
+</div>
+
+
+  <label>City</label>
+  <input type="text" placeholder="Enter Your City" name="city" [(ngModel)]="city" required />
+
+  <label>Pick-Up Location</label>
+  <input type="text" placeholder="Pick-Up Location" name="pickup" [(ngModel)]="pickup" required />
+
+  <label>Pick-Up Date</label>
+  <input type="date" name="date" [(ngModel)]="date" required />
+
+  <label>Pick-Up Time</label>
+  <input type="time" name="time" [(ngModel)]="time" required />
+
+    <label>Select Vehicle</label>
+  <select name="vehicle" [(ngModel)]="vehicle" >
+   <option value="">Select</option>
+    <option value="Sedan – Toyota Etios, Maruti Dzire">Sedan – Toyota Etios, Maruti Dzire</option>
+    <option value="Prime Sedan - Maruti Ciaz">Prime Sedan - Maruti Ciaz</option>
+    <option value="MUV – Maruti Ertiga">MUV – Maruti Ertiga</option>
+    <option value="SUV – Toyota Innova Crysta">SUV – Toyota Innova Crysta</option>
+    <option value="Prime Suv - Toyota Hycross">Prime Suv - Toyota Hycross</option>
+    <option value="Prime Suv - Toyota Fortuner">Prime Suv - Toyota Fortuner</option>
+    <option value="Tempo Traveller">Tempo Traveller</option>
+    <option value="Luxury Urbania">Luxury Urbania</option>
+    <option value="Luxury Coaches">Luxury Coaches</option>
+  </select>
+<label>Name </label>
+  <input type="text" placeholder="Name" name="name" [(ngModel)]="name" required />
+  <label>Contact Number</label>
+  <input type="text" placeholder="Contact Number" name="phone" [(ngModel)]="phone" required />
+
+  <div class="form-action">
+    <button type="submit" [disabled]="!rentalForm.valid">Confirm Your Booking</button>
+  </div>
+</form>

@@ -1,0 +1,222 @@
+/* Banner Section */
+.con {
+  height: 40vh;
+  background-image: url('/assets/banner.jpeg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top:120px ;
+  display: flex;
+  align-items: center;
+  
+}
+.con::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.con h1{
+    color: white;
+    margin-left: 5%;
+    font-size: 45px;
+    z-index: 4;
+}
+
+/* First Card Section */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 260px;
+  height: 350px;
+  /* padding: 16px; */
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  /* border-radius: 12px; */
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 12px;
+
+}
+
+.card button {
+ position: absolute;
+ bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #ffc107;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #e0a800;
+}
+
+/* Vehicle Section */
+.main {
+  padding: 2rem;
+  /* background: linear-gradient(to right, #e0f7fa, #e1f5fe); */
+  text-align: center;
+  /* box-shadow: 0 0 30px black; */
+}
+
+
+.heading h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  color: #faf61a;
+  text-shadow: 0 0 5px #faf61a;
+}
+
+.heading p {
+  font-size: 1rem;
+  color: #fffdfd;
+  margin-bottom: 2rem;
+}
+
+/* FLEX container for con1 and con2 */
+.con1,
+.con2 {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.con1 div,
+.con2 div {
+  background: rgba(255, 255, 255, 0.15); /* translucent white */
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+  backdrop-filter: blur(10px); /* the blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.con1 div:hover,
+.con2 div:hover {
+  transform: scale(1.05);
+}
+
+
+.con1 img,
+.con2 img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.con1 h1,
+.con2 h1 {
+  font-size: 1.5rem;
+  color: #e7f713;
+  margin-bottom: 0.5rem;
+}
+
+.con1 p,
+.con2 p {
+  font-size: 1rem;
+  color: #eeebeb;
+  line-height: 1.4;
+}
+.con1 h4,
+.con2 h4 {
+  font-size: 1.2rem;
+  background: linear-gradient(to right, #e3fa11, #e2dcdc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-shadow: 0 0 5px #e3fa11; */
+  background-clip: text; /* for newer browsers */
+  color: transparent;
+  line-height: 1.4;
+}
+.con1 button,
+.con2 button{
+     background-color: #FFD700; /* bright yellow */
+  color: #000; /* black text for contrast */
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+  margin-top: 4px;
+}
+.con1 button:hover,
+.con2 button:hover{
+    background-color: #ffc800; /* slightly darker yellow on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .con1,
+  .con2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .con1 div,
+  .con2 div {
+    width: 90%;
+    max-width: 90%;
+  }
+  button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  .heading h1{
+    font-size: 2rem;
+  }
+}

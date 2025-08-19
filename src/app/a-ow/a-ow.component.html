@@ -1,0 +1,66 @@
+
+<form (ngSubmit)="submitForm()" #rideForm="ngForm">
+  <h2> One Way</h2>
+
+  <!-- Trip selection only for One Way -->
+ 
+    <label>Trip</label>
+    <select name="trip" [(ngModel)]="trip" required>
+      <option value="">Select</option>
+      <option value="Pick up from Airport">Pick up from Airport</option>
+      <option value="Drop to Airport">Drop to Airport</option>
+    </select>
+ 
+
+  <!-- Terminal -->
+  <label>Terminal</label>
+  <select name="Terminal" [(ngModel)]="Terminal" required>
+    <option value="" disabled selected>Select</option>
+    <option value="Terminal 1">Terminal 1</option>
+    <option value="Terminal 2">Terminal 2</option>
+  </select>
+
+<label>{{trip==='Pick up from Airport'?'Drop Address':'Pick-up Address'}}</label>
+<input type="text" name="Address" id="Address" [(ngModel)]="pickup" placeholder="{{trip==='Pick up from Airport'?'Drop Address':'Pick -up Address'}}">
+  
+
+  <!-- Flight Number (shown only when needed) -->
+  <div *ngIf=" trip === 'Pick up from Airport'">
+    <label>Flight Number</label>
+    <input type="text" placeholder="Enter Flight No." name="Flight" [(ngModel)]="Flight" required />
+  </div>
+
+  <!-- Date and Time -->
+  <label>Pick-Up Date</label>
+  <input type="date" name="date" [(ngModel)]="date" required />
+
+  <label>Pick-Up Time</label>
+  <input type="time" name="time" [(ngModel)]="time" required />
+
+  <!-- Vehicle Selection -->
+  <label>Select Vehicle</label>
+  <select name="vehicle" [(ngModel)]="vehicle">
+    <option value="">Select</option>
+    <option value="Sedan – Toyota Etios, Maruti Dzire">Sedan – Toyota Etios, Maruti Dzire</option>
+    <option value="Prime Sedan - Maruti Ciaz">Prime Sedan - Maruti Ciaz</option>
+    <option value="MUV – Maruti Ertiga">MUV – Maruti Ertiga</option>
+    <option value="SUV – Toyota Innova Crysta">SUV – Toyota Innova Crysta</option>
+    <option value="Prime Suv - Toyota Hycross">Prime Suv - Toyota Hycross</option>
+    <option value="Prime Suv - Toyota Fortuner">Prime Suv - Toyota Fortuner</option>
+    <option value="Tempo Traveller">Tempo Traveller</option>
+    <option value="Luxury Urbania">Luxury Urbania</option>
+    <option value="Luxury Coaches">Luxury Coaches</option>
+  </select>
+
+  <!-- Contact Info -->
+  <label>Name</label>
+  <input type="text" placeholder="Name" name="name" [(ngModel)]="name" required />
+
+  <label>Contact Number</label>
+  <input type="text" placeholder="Contact Number" name="phone" [(ngModel)]="phone" required />
+
+  <!-- Submit -->
+  <div class="form-action">
+    <button type="submit" [disabled]="!rideForm.valid">Confirm Your Booking</button>
+  </div>
+</form>

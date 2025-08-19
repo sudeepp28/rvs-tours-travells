@@ -1,0 +1,44 @@
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff10; /* semi-transparent white */
+  color: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  flex: 1 1 300px;
+  min-width: 250px;
+  max-width: 350px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h1 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+}
+
+.card p, .card li {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+}

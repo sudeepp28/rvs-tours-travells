@@ -1,0 +1,17 @@
+<div class="backdrop" (click)="closePopup()"></div>
+
+<div class="popup">
+  <button class="close-btn" (click)="closePopup()">×</button>
+  <h2 style="color: rgb(247, 243, 11);">📞 Contact Us To Book a Cab</h2>
+  <p style="color: white;">Need a cab? Call or Text on WhatsApp us directly!</p>
+
+  <div class="number-box">{{ adminPhone }}</div>
+
+  <a class="call-btn" [href]="'tel:' + adminPhone">📞Call Now</a>
+  <a class="whatsapp-btn" 
+     [href]="'https://wa.me/' + adminPhone.replace('+', '') + '?text=' + prefilledText"
+     target="_blank">
+     <i class="fa-brands fa-whatsapp"></i>
+    Chat on WhatsApp
+  </a>
+</div>

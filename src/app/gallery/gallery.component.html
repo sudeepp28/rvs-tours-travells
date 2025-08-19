@@ -1,0 +1,24 @@
+<div class="con">
+    <h1 class="animate-on-scroll">Our Gallery</h1>
+</div>
+<div class="gallery-container">
+  
+    <div class="gallery-grid">
+      <div 
+        class="gallery-item" 
+        *ngFor="let img of images; let i = index" 
+        (click)="openLightbox(i)">
+        <img [src]="img" alt="RVS Vehicle">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Lightbox Popup -->
+  <div class="lightbox" *ngIf="lightboxOpen">
+    <span class="close" (click)="closeLightbox()">&times;</span>
+    <img class="lightbox-img" [src]="images[currentIndex]" alt="RVS Vehicle">
+    <a class="prev" (click)="prevImage()">&#10094;</a>
+    <a class="next" (click)="nextImage()">&#10095;</a>
+  </div>
+  
+  

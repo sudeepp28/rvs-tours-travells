@@ -1,0 +1,45 @@
+
+<div class="main">
+  <div class="img">
+    <img src="assets/hsecond.png" alt="">
+    <h2 style="color: aliceblue;">Quick Booking. Trusted Rides. Start Now!</h2>
+  </div>
+  <div class="con">
+  <div class="form-toggle-buttons" style="margin-top: 10px ;">
+     <button 
+    (click)="activeForm = 'airport'" 
+    [class.active]="activeForm === 'airport'">
+    <i class="fa-solid fa-plane"></i>
+    Airport Taxi
+  </button>
+  <button 
+    (click)="activeForm = 'outstation'" 
+    [class.active]="activeForm === 'outstation'">
+    <i class="fa-solid fa-inbox"></i>
+    Outstation Cab
+  </button>
+  <button 
+    (click)="activeForm = 'car'" 
+    [class.active]="activeForm === 'car'">
+    <i class="fa-solid fa-car"></i>
+    Car Rental
+  </button>
+  <button 
+    (click)="activeForm = 'city'" 
+    [class.active]="activeForm === 'city'">
+      <i class="fa-solid fa-location-arrow"></i>
+    City Rides
+  </button>
+</div>
+
+
+<!-- Conditional form component rendering -->
+<div class="form-container">
+ <app-outstation *ngIf="activeForm === 'outstation'"></app-outstation>
+  <app-car-rental *ngIf="activeForm === 'car'"></app-car-rental>
+  <app-airport-taxi *ngIf="activeForm === 'airport'"></app-airport-taxi>
+  <app-city-rides *ngIf="activeForm === 'city'"></app-city-rides>
+</div>
+
+</div>
+</div>

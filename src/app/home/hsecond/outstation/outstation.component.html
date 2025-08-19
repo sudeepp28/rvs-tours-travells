@@ -1,0 +1,54 @@
+<h3>Outstation Cab Booking</h3>
+
+<!-- Trip type selection -->
+<div class="trip-type">
+    <button type="button" [class.active]="isRoundTrip" (click)="isRoundTrip = true">Round Trip</button>
+  <button type="button" [class.active]="!isRoundTrip" (click)="isRoundTrip = false">One Way</button>
+
+</div>
+
+<form (ngSubmit)="submitForm()" #form="ngForm">
+  <h2>{{isRoundTrip? 'Round Trip':'One Way' }}</h2>
+
+  <label>Pickup Address</label>
+  <input type="text" placeholder="Enter Your Pickup City" name="pickupCity" [(ngModel)]="pickupCity" required />
+
+  <label>Destination Address</label>
+  <input type="text" placeholder="Enter Your Drop City" name="dropCity" [(ngModel)]="dropCity" required />
+
+  <label>Pick-Up Date</label>
+  <input type="date" name="pickupDate" [(ngModel)]="pickupDate" required />
+
+  <label>Pick-Up Time</label>
+  <input type="time" name="pickupTime" [(ngModel)]="pickupTime" required />
+  
+   <div *ngIf="isRoundTrip">
+    <label>Return Date</label>
+    <input type="date" name="returnDate" [(ngModel)]="returnDate" />
+  </div>
+
+  <label>Select Vehicle</label>
+  <select name="vehicle" [(ngModel)]="vehicle">
+    <option value="">Select</option>
+    <option value="Sedan – Toyota Etios, Maruti Dzire">Sedan – Toyota Etios, Maruti Dzire</option>
+    <option value="Prime Sedan - Maruti Ciaz">Prime Sedan - Maruti Ciaz</option>
+    <option value="MUV – Maruti Ertiga">MUV – Maruti Ertiga</option>
+    <option value="SUV – Toyota Innova Crysta">SUV – Toyota Innova Crysta</option>
+    <option value="Prime Suv - Toyota Hycross">Prime Suv - Toyota Hycross</option>
+    <option value="Prime Suv - Toyota Fortuner">Prime Suv - Toyota Fortuner</option>
+    <option value="Tempo Traveller">Tempo Traveller</option>
+    <option value="Luxury Urbania">Luxury Urbania</option>
+    <option value="Luxury Coaches">Luxury Coaches</option>
+  </select>
+  <label>Name </label>
+  <input type="text" placeholder="Name" name="name" [(ngModel)]="name" required />
+  <label>Contact Number</label>
+  <input type="text" placeholder="Contact Number" name="contact" [(ngModel)]="contact" required />
+
+  <!-- Conditional Return Date -->
+ 
+
+  <div class="form-action">
+    <button type="submit" [disabled]="!form.valid">Confirm Your Booking</button>
+  </div>
+</form>

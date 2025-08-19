@@ -1,0 +1,87 @@
+<div class="main">
+    <div class="heading">
+        <h1>Our Fleet</h1>
+        <p>Choose the perfect ride for your needs:</p>
+    </div>
+    <div class="con">
+        <div class="con1">
+            <div>
+                <img src="assets/toyota.png" alt="">
+                <h1>Prime Sedan</h1>
+               <h4>4+1 seater</h4>
+                <p>✔ AC | ✔ Pushback seats | ✔ Professional drivers | ✔ GPS & Music system</p>
+
+                <button (click)="goto('1')">Book Now</button>
+            </div>
+            <div> <img src="assets/sedan.png" alt="">
+                <h1>Prime Sedan - Maruti Ciaz</h1>
+                <h4>4+1 seater</h4>
+                <p>✔ AC | ✔ Pushback seats | ✔ Professional drivers | ✔ GPS & Music system</p>
+                <button (click)="goto('2')">Book Now</button>
+            </div>
+            <div> <img src="assets/Ertiga.png" alt="">
+                <h1>MUV – Maruti Ertiga</h1>
+                <h4> 6+1 seater</h4>
+                <p>✔ AC | ✔ Pushback seats | ✔ Professional drivers | ✔ GPS & Music system</p>
+                <button (click)="goto('3')">Book Now</button>
+            </div>
+        </div>
+        <div class="con2">
+             <div>
+                <img src="assets/Innova.png" alt="">
+                <h1>SUV – Toyota Innova Crysta</h1>
+                <h4> 6+1 & 7+1 seater</h4>
+                <p>✔ AC | ✔ Pushback seats | ✔ Professional drivers | ✔ GPS & Music system</p>
+                <button (click)="goto('4')">Book Now</button>
+            </div>
+            <div> <img src="assets/Hycross.png" alt="">
+               <h1>Prime Suv - Toyota Hycross / Hybrid</h1>
+                <h4> 6+1 & 7+1 seater</h4>
+                <p>✔ AC | ✔ Pushback seats | ✔ Professional drivers | ✔ GPS & Music system</p>
+                <button (click)="goto('5')">Book Now</button>
+            </div>
+            <div> <img src="assets/fortuner.png" alt="">
+                <h1>Prime Suv - Toyota Fortuner</h1>
+                <h4>7+1 seater</h4>
+                <p>✔ AC | ✔ Pushback seats | ✔ Professional drivers | ✔ GPS & Music system</p>
+                <button (click)="goto('6')">Book Now</button>
+            </div>
+              <div> <img src="assets/Tempo.png" alt="">
+                <h1>Tempo Traveller</h1>
+                <h4> 12+1 seater</h4>
+                <p>✔ AC | ✔ Pushback seats | ✔ Professional drivers | ✔ GPS & Music system</p>
+                <button (click)="goto('7')">Book Now</button>
+            </div>
+              <div> <img src="assets/Traveller.png" alt="">
+                <h1>Luxury Urbania</h1>
+                <h4> 10, 12, 13, 14 and 17 seater</h4>
+                <p>✔ AC | ✔ Pushback seats | ✔ Professional drivers | ✔ GPS & Music system</p>
+                <button (click)="goto('8')">Book Now</button>
+            </div>
+              <div> <img src="assets/Luxury Coaches.png" alt="">
+                <h1>Luxury Coaches</h1>
+                <h4>21, 32, 50 Seater</h4>
+                <p>✔ AC | ✔ Pushback seats | ✔ Professional drivers | ✔ GPS & Music system</p>
+                <button (click)="goto('9')">Book Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="strap">
+ <h3>Popular Destinations in Karnataka That We Cover</h3>
+<div >
+     <p>Explore the rich heritage, nature, and culture of Karnataka with <strong style="color:#775804 ;font-size: 21px;"> RVS Tours & Travels</strong>. We provide safe, comfortable, and customizable trips to:</p>
+<button (click)="openPopUp()">Get Enquiry</button>
+</div>
+</div>
+<div class="strip">
+ @for(d of data; track d.id){
+    <div (click)="goDettails(d.id)">
+        <img [src]="d.src" alt="">
+        <h1>{{d.h1}}</h1>
+        
+        <i class="fa-solid fa-arrow-right" style="margin-top: 1rem;"></i>
+    </div>
+ } 
+</div>

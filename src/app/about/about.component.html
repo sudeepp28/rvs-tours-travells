@@ -1,0 +1,10 @@
+<div class="con">
+    <h1 class="animate-on-scroll">About Us</h1>
+</div>
+<app-afirst></app-afirst>
+<app-anew></app-anew>
+<app-asecond></app-asecond>
+<app-athird (open)="openPopUp()"></app-athird>
+@if(ispopup){
+    <app-call-now (close)="closePopup()"></app-call-now>
+}

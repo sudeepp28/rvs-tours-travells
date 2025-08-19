@@ -1,0 +1,53 @@
+.con {
+  height: 40vh;
+  background-image: url('/assets/banner.jpeg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top:120px ;
+  display: flex;
+  align-items: center;
+  
+}
+.con::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.con h1{
+    color: white;
+    margin-left: 5%;
+    font-size: 45px;
+    z-index: 4;
+}
+@media screen and (max-width:766px) {
+  .con{
+    height: 30vh;
+    padding-bottom: 2rem;
+  }
+}
+.description {
+  font-size: 22px;
+  line-height: 2;
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center;
+   background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.description strong{
+    font-size: 24px;
+    color: rgb(247, 247, 14);
+}

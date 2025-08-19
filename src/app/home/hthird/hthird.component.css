@@ -1,0 +1,207 @@
+.con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 2rem;
+  background: linear-gradient(to right, #0f172a, #1e293b); /* Premium Blue BG */
+}
+
+.con > div {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.con > div::before,
+.con > div::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: conic-gradient(from 180deg, #ffd700, #cd7f32, #ffd700);
+  animation: rotate 6s linear infinite;
+  z-index: 0;
+  opacity: 0.1;
+}
+
+.con > div::after {
+  filter: blur(30px);
+  opacity: 0.2;
+}
+
+.con > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.con > div img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.con > div p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .con > div {
+    width: 45%;
+    height: auto;
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .con > div {
+    width: 100%;
+  }
+}
+
+/* Animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  
+  /* background: #fff; */
+  color: #fff;
+}
+
+/* Header Section */
+.heading {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px;
+  /* font-size: 7rem; */
+  
+}
+
+.subtext {
+  color: #e2dfdf;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.heading h2 {
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: rgb(251, 255, 0);
+  font-weight: 600;
+  font-size: 50px;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Card Styling */
+.card {
+  background: #f7f7f7;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  height: 165px;
+  width: auto;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 22px;
+  color:#111;
+}
+
+.card p {
+  color: #666;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* Wide card */
+.card.wide {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.card.wide img {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 350px; /* You can increase/decrease this */
+  height: auto;
+  object-fit: contain;
+}
+.card.wide.wider img {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 700px; /* You can increase/decrease this */
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card.wide {
+    grid-column: span 1;
+  }
+  .heading{
+    margin-left: 10px;
+  }
+}
+

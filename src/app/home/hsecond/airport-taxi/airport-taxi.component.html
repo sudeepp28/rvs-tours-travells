@@ -1,0 +1,13 @@
+<h3>Airport Taxi Booking</h3>
+
+<div class="trip-type">
+  <button type="button" [class.active]="!isRoundTrip" (click)="isRoundTrip = false">One Way</button>
+  <button type="button" [class.active]="isRoundTrip" (click)="isRoundTrip = true">Round Trip</button>
+</div>
+
+@if(!isRoundTrip){
+  <app-a-ow></app-a-ow>
+}
+@else {
+  <app-art></app-art>
+}

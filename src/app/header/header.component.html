@@ -1,0 +1,22 @@
+
+<header class="header">
+  <div class="container">
+
+    <div (click)="goTo()" class="logo"><img src="assets/logo.png" alt=""></div>
+     <div class="hamburger" (click)="opensideBar()" >
+      &#9776;
+    </div>
+   <nav class="nav-links desktop">
+  <a routerLink="/" routerLinkActive="active"[routerLinkActiveOptions]="{ exact: true }" >Home</a>
+  <a routerLink="/about" routerLinkActive="active">About Us</a>
+  <a routerLink="/service" routerLinkActive="active">Our Services</a>
+  <a routerLink="/gallery" routerLinkActive="active">Our Galley</a>
+</nav>
+
+     <div class="buttons ">
+      <!-- <button class="sign-in-btn">Sign in</button> -->
+      <button (click)="goContact()" class="contact-btn">Contact Us</button>
+    </div>
+   
+  </div>
+</header>

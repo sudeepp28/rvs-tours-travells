@@ -1,0 +1,104 @@
+form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #cfd9df, #e2ebf0); /* Light grey to soft blue */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h3 {
+  text-align: center;
+  color: #d6e4f1;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #2f4f4f;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #d7e423;
+  background-color: #f0f9ff;
+}
+
+.form-action {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.form-action button {
+  padding: 10px 24px;
+  font-size: 1rem;
+  background-color: #fbff00;
+  color: rgb(7, 7, 7);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-action button:hover {
+  background-color: #1c6690;
+}
+select {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: white;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+select:focus {
+  outline: none;
+  border-color: #2980b9;
+  background-color: #f0f9ff;
+}
+.trip-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.trip-type button {
+  padding: 10px 18px;
+  border: none;
+  background:black; /* 🟡 Yellow base */
+  color: #fbc02d;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s;
+  font-size: 14px;
+}
+
+.trip-type button.active {
+  background: #fbc02d; /* 🟡 Darker yellow when active */
+  color: black;
+}

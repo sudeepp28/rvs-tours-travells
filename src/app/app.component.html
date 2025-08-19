@@ -1,0 +1,24 @@
+<app-header (open)="openSideBar()" (OpenPopup)="openPopUp()"></app-header>
+
+<router-outlet></router-outlet>
+
+@if(issidebar){
+    <app-sidebar (close)="closeSidebar()" (open)="openPopUp()"></app-sidebar>
+}
+<app-footer></app-footer>
+@if(isPopUp){
+    <app-call-now (close)="closePopUp()"></app-call-now>
+}
+
+<div style="display: flex; flex-direction: column;">
+    <a [href]="'https://wa.me/' + adminPhone.replace('+', '') + '?text=' + prefilledText"
+     target="_blank">
+    <button class="btn " ><img src="assets/wp.png" alt=""></button>
+</a>
+ <a [href]="'tel:' + adminPhone">
+    <button class="callbtn " ><img src="assets/call.png" alt=""></button>
+</a>
+<a href="assets/base.apk">
+    <button class="dnld_btn"><img src="assets/BJ__3_-removebg-preview.png" alt=""></button>
+</a>
+</div>

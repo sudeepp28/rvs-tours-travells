@@ -1,0 +1,240 @@
+.main {
+  padding: 2rem;
+  /* background: linear-gradient(to right, #e0f7fa, #e1f5fe); */
+  text-align: center;
+  box-shadow: 0 0 30px black;
+}
+
+
+.heading h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  color: #faf61a;
+  text-shadow: 0 0 5px #faf61a;
+}
+
+.heading p {
+  font-size: 1rem;
+  color: #fffdfd;
+  margin-bottom: 2rem;
+}
+
+/* FLEX container for con1 and con2 */
+.con1,
+.con2 {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.con1 div,
+.con2 div {
+  background: rgba(255, 255, 255, 0.15); /* translucent white */
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+  backdrop-filter: blur(10px); /* the blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.con1 div:hover,
+.con2 div:hover {
+  transform: scale(1.05);
+}
+
+
+.con1 img,
+.con2 img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.con1 h1,
+.con2 h1 {
+  font-size: 1.5rem;
+  color: #e7f713;
+  margin-bottom: 0.5rem;
+}
+
+.con1 p,
+.con2 p {
+  font-size: 1rem;
+  color: #eeebeb;
+  line-height: 1.4;
+}
+.con1 h4,
+.con2 h4 {
+  font-size: 1.2rem;
+  background: linear-gradient(to right, #e3fa11, #e2dcdc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-shadow: 0 0 5px #e3fa11; */
+  background-clip: text; /* for newer browsers */
+  color: transparent;
+  line-height: 1.4;
+}
+.con1 button,
+.con2 button{
+     background-color: #FFD700; /* bright yellow */
+  color: #000; /* black text for contrast */
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+  margin-top: 4px;
+}
+.con1 button:hover,
+.con2 button:hover{
+    background-color: #ffc800; /* slightly darker yellow on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .con1,
+  .con2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .con1 div,
+  .con2 div {
+    width: 90%;
+    max-width: 90%;
+  }
+  button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.strip {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding: 10px;
+  justify-content: space-evenly; /* ensures natural left alignment */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.strip > div {
+  width: 200px;
+  height: 250px;
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* stack image + h1 vertically */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition: transform 0.2s ease;
+}
+
+.strip > div:hover {
+  transform: scale(1.05);
+}
+
+.strip > div img {
+  width: 150px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.strip > div h1 {
+  font-size: 16px;
+  margin: 0;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* show max 3 lines */
+  -webkit-box-orient: vertical;
+  color: #333;
+}
+.strap {
+  background: linear-gradient(to right, rgb(249, 252, 105), rgb(196, 197, 122));
+  
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+}
+
+.strap h3 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #775804;
+}
+
+.strap > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.strap p {
+  flex: 1 1 70%;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  margin: 0;
+  color: #1a1e24;
+}
+
+.strap button {
+  flex: 0 1 auto;
+  padding: 12px 24px;
+  background-color: #ffc107;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.strap button:hover {
+  background-color: #e0a800;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .strap > div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .strap p,
+  .strap button {
+    flex: 1 1 100%;
+  }
+
+  .strap button {
+    margin-top: 10px;
+  }
+}

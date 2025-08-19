@@ -1,0 +1,53 @@
+
+<div class="img">
+  <img src="assets/footer.png" alt="">
+</div>
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-column">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/service">Our Service</a></li>
+        <li><a routerLink="/gallery">Our Gallery</a></li>
+         
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>About us</h4>
+      
+      <p class="text">
+        At <strong>RVS Tours & Travels</strong>,  we believe that every journey should be memorable, safe, and convenient. Based in <strong>Bangalore</strong>, we are one of the leading travel service providers, offering a wide range of vehicles and packages to suit every customer’s needs.
+      </p>
+
+
+      
+    </div>
+
+    <div class="footer-column">
+      <h4>Connect with us</h4>
+      <ul>
+       <li><strong>Address</strong> : <a href="https://maps.app.goo.gl/HhKdsY2XwEGhdEXy9" target="_blank" 
+  rel="noopener noreferrer">  {{Registered_Office}}</a></li>
+       <li class="mobile"> <a style="text-decoration: none; color: #ffffff;" [href]="'mailto:' + email + '?subject=Cab Booking&body=Hello, I would like to inquire about your services.'" >📧{{email}} </a></li>
+       <li class="pc"> 📧{{email}}</li>
+        <li>📞 <a  style="color: #fff; text-decoration: none;" [href]="'tel:' + adminPhone1">{{adminPhone1}}</a> </li>
+        <!-- <span style="font-size: 18px;">|</span> <a style="color: #fff; text-decoration: none;" [href]="'tel:' + adminPhone2">{{adminPhone2}}</a>  -->
+      </ul>
+      <div class="social-icons">
+        <!-- <a href="#"><i class="fa-brands fa-facebook" style="color: rgb(127, 127, 235);"></i></a> -->
+        <!-- <a href="https://www.linkedin.com/in/ramesh-dalal-37380a254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"   target="_blank" 
+  rel="noopener noreferrer"><i class="fa-brands fa-linkedin" style="color: rgb(1, 1, 150);"></i></a> -->
+        <!-- <a href="#"><i class="fa-brands fa-twitter" style="color: rgb(41, 41, 240);"></i></a> -->
+        <a href="https://www.instagram.com/navacabservice?igsh=MnNrZHQ2cmRlMjl2"   target="_blank" 
+  rel="noopener noreferrer"><i class="fa-brands fa-instagram" style="color: rgb(240, 19, 229);"></i></a>
+   <a href=" https://www.facebook.com/share/1RP6Ee2439/"   target="_blank" 
+  rel="noopener noreferrer"><i class="fa-brands fa-facebook" style="color:rgb(45, 45, 244)"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="below">{{below}}</h1>
+</footer>
