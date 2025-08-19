@@ -9,12 +9,12 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class TestimonialComponent implements OnInit, OnDestroy {
   testimonials = [
      {
-      text:'We used Nava Cabs for a corporate event in Bangalore. Their service was top-notch — punctual pickups, professional drivers, and neatly maintained vehicles. Highly recommended for office travel!',
+      text:'We used RVS Tours & Travels for a corporate event in Bangalore. Their service was top-notch — punctual pickups, professional drivers, and neatly maintained vehicles. Highly recommended for office travel!',
       name: "Meenakshi Iyer – Chennai, Tamil Nadu",
       image: "assets/logo (5).jpg"
     },
      {
-      text:'Booked an outstation trip to Coorg with Nava Cabs and it was an excellent experience. The driver was polite, the car was clean, and the entire journey was smooth. Will definitely choose them again!',
+      text:'Booked an outstation trip to Coorg with RVS Tours & Travels and it was an excellent experience. The driver was polite, the car was clean, and the entire journey was smooth. Will definitely choose them again!',
       name: " Vishal Reddy – Hyderabad, Telangana",
       image: "assets/logo (1).jpg"
     },
@@ -24,7 +24,7 @@ export class TestimonialComponent implements OnInit, OnDestroy {
       image: "assets/logo (3).jpg"
     },
     {
-      text:"I’ve used Nava Cabs multiple times for business trips in Bangalore. Their monthly corporate cab package is very convenient and cost-effective. Always on time and reliable.",
+      text:"I’ve used RVS Tours & Travels multiple times for business trips in Bangalore. Their monthly corporate cab package is very convenient and cost-effective. Always on time and reliable.",
       name: "Sandeep Nair – Trivandrum, Kerala",
       image: "assets/logo (2).jpg"
     },
@@ -34,7 +34,7 @@ export class TestimonialComponent implements OnInit, OnDestroy {
       image: "assets/logo (4).jpg"
     },
      {
-      text:'We took a rental for a 5-day South India temple tour. Nava Cabs customized the itinerary as per our needs and the Innova Crysta provided was in perfect condition. Truly a spiritual and stress-free journey.',
+      text:'We took a rental for a 5-day South India temple tour. RVS Tours & Travels customized the itinerary as per our needs and the Innova Crysta provided was in perfect condition. Truly a spiritual and stress-free journey.',
       name: "Rohit Sharma – Jaipur, Rajasthan",
       image: "assets/logo.jpg"
     }
