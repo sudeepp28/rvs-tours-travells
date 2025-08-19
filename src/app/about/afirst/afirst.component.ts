@@ -10,7 +10,8 @@ export class AfirstComponent implements OnInit, OnDestroy {
   images: string[] = [
     'assets/afirst.jpg',
     'assets/asecond.jpg',
-    'assets/athird.jpg'
+    'assets/athird.jpg',
+    'assets/rvs (12).jpg'
   ];
   currentIndex: number = 0;
   currentImage: string = this.images[0];
