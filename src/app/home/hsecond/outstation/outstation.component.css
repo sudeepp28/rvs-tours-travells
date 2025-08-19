@@ -100,7 +100,7 @@ select {
 
 select:focus {
   outline: none;
-  border-color: #2980b9;
+  border-color: #f1f524;
   background-color: #f0f9ff;
 }
 .trip-type {
