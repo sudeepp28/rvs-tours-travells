@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-journeycab": {
+    "rvs-tours-travels": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/my-journeycab",
+            "outputPath": "dist/rvs-tours-travels",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -22,7 +22,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/_redirects" 
             ],
             "styles": [
               "src/styles.css"
@@ -57,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "my-journeycab:build:production"
+              "buildTarget": "rvs-tours-travels:build:production"
             },
             "development": {
-              "buildTarget": "my-journeycab:build:development"
+              "buildTarget": "rvs-tours-travels:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "my-journeycab:build"
+            "buildTarget": "rvs-tours-travels:build"
           }
         },
         "test": {
