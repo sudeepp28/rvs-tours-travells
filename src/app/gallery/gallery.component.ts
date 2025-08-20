@@ -23,7 +23,17 @@ export class GalleryComponent {
     'assets/gallery13.jpeg',
     'assets/gallery14.jpeg',
     'assets/gallery15.jpeg',
-    'assets/gallery16.jpeg'
+    'assets/gallery16.jpeg',
+    'assets/gallery17.jpeg',
+    'assets/gallery18.jpeg',
+    'assets/gallery19.jpeg',
+    'assets/gallery20.jpeg',
+    'assets/gallery21.jpeg',
+    'assets/gallery22.jpeg',
+    'assets/gallery23.jpeg',
+    'assets/gallery24.jpeg',
+    'assets/gallery25.jpeg',
+    'assets/gallery26.jpeg',
   ];
   lightboxOpen = false;
   currentIndex = 0;
